@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIL: INTL</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+    <main>
+        <section class="container">
+            <header>
+                <h4>INTL: API de Internalização do JavaScript</h4>
+                <button class="btn btn-danger" type="button" onclick="resetInputs()">Reset</button>
+            </header>
+
+            <div style="margin: 0 0 30px !important;" class="input-group">
+                <div class="input-group-prepend">
+                    <label class="input-group-text" for="inputGroupSelect01">Linguagem</label>
+                </div>
+                <select onchange="onChangeSelect()" class="custom-select" id="languages">
+                    <option selected value="pt-BR">Português</option>
+                    <option value="en-US">Inglês</option>
+                    <option value="ar">Árabe</option>
+                    <option value="ja-JP">Japônes</option>
+                </select>
+            </div>
+
+            <section class="number-format">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Numero para formatação" id="myNumber">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" type="button" onclick="setInputNumberValues()"
+                            id="button-addon2">Enviar</button>
+                    </div>
+                </div>
+
+                <div class="container-format">
+                    <h6>Fomartador - Clássico</h6>
+                    <input class="form-control" id="NumFormat" type="text" readonly>
+                </div>
+
+                <div class="container-format">
+                    <h6>Fomartador - Moeda</h6>
+                    <input class="form-control" id="Currency" type="text" readonly>
+                </div>
+            </section>
+
+            <section class="date-format">
+                <div class="input-group">
+                    <input type="date" class="form-control" id="date" name="date">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" type="button" onclick="setInputDateValues()"
+                            id="button-addon2">Enviar</button>
+                    </div>
+                </div>
+
+                <div class="container-format">
+                    <h6>Fomartador (Data) - Clássico</h6>
+                    <input class="form-control" id="DateInput" type="text" readonly>
+                </div>
+                <div class="container-format">
+                    <h6>Fomartador (Data) - Customizado</h6>
+                    <input class="form-control" id="CustomInput" type="text" readonly>
+                </div>
+            </section>
+
+        </section>
+    </main>
+    <script src="./index.js"></script>
+    <script src="./NumberFormat.js"></script>
+    <script src="./DateFormart.js"></script>
+</body>
+
+</html>
